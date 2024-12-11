@@ -337,20 +337,41 @@ A line is a line in Euclidean sense. Denoted as <code>Line</code>.</p>
 <p><strong>Return type</strong>: <a href="#circle">Circle</a></p>
 <p><strong>Returns</strong>: The circle circumscribed on the three points.</p>
 <ul>
+<li><code>circumcenter()</code> (alias <code>circumcentre</code>) if the collection has length of 3.</li>
+</ul>
+<p><strong>Return type</strong>: <a href="#point">Point</a></p>
+<p><strong>Returns</strong>: The center of the circle circumscribed on the three points.</p>
+<ul>
 <li><code>dst()</code> (alias <code>len</code>) if the collection has length of 2.</li>
 </ul>
 <p><strong>Return type</strong>: <a href="#number">Number (distance)</a></p>
 <p><strong>Returns</strong>: the distance between the two points.</p>
 <ul>
+<li><code>excircle</code> if the collection has length of 3</li>
+</ul>
+<p><strong>Return type</strong>: <a href="#Circle">Circle</a></p>
+<p><strong>Returns</strong>: the circle excribed to the points given, with the center on the bisector of angle <code>ABC</code>.</p>
+<ul>
 <li><code>incircle()</code> if the collection has length of 3.</li>
 </ul>
 <p><strong>Return type</strong>: <a href="#circle">Circle</a></p>
 <p><strong>Returns</strong>: The circle inscribed in the three points.</p>
+<p><strong>Returns</strong>: the distance between the two points.</p>
+<ul>
+<li><code>incenter()</code> (alias <code>incentre</code>) if the collection has length of 3.</li>
+</ul>
+<p><strong>Return type</strong>: <a href="#point">Point</a></p>
+<p><strong>Returns</strong>: The cetner of the circle inscribed in the three points.</p>
 <ul>
 <li><code>mid()</code> for any length.</li>
 </ul>
 <p><strong>Return type</strong>: <a href="#point">Point</a></p>
 <p><strong>Returns</strong>: The arithmetic average of the points included in the collection (coordinates-wise).</p>
+<ul>
+<li><code>orthocenter()</code> (alias <code>orthocentre</code>) if the collection has length of 3.</li>
+</ul>
+<p><strong>Return type</strong>: <a href="#point">Point</a></p>
+<p><strong>Returns</strong>: The intersection of the triangle's altitudes.</p>
 <ul>
 <li><code>vector()</code> (alias <code>vec</code>) if the collection has length of 2.</li>
 </ul>
