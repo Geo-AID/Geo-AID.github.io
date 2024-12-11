@@ -268,7 +268,7 @@ Overloads are listed in the order they are checked.</p>
 <ul>
 <li><code>angle(k: Line, l: Line)</code></li>
 </ul>
-<h2 id="center"><a class="header" href="#center"><code>center</code></a></h2>
+<h2 id="center-alias-centre"><a class="header" href="#center-alias-centre"><code>center</code> (alias <code>centre</code>)</a></h2>
 <ul>
 <li><code>center(circle: Circle)</code></li>
 </ul>
@@ -291,7 +291,14 @@ Overloads are listed in the order they are checked.</p>
 <li><code>circumcircle(abc: 3-P)</code></li>
 </ul>
 <p><strong>Return type</strong>: <a href="./types.html#Circle">Circle</a></p>
-<p><strong>Returns</strong>: a circle circumscribed on the three points given.</p>
+<p><strong>Returns</strong>: the circle circumscribed on the three points given.</p>
+<h2 id="circumcenter"><a class="header" href="#circumcenter"><code>circumcenter</code></a></h2>
+<ul>
+<li><code>circumcenter(a: Point, b: Point, c: Point)</code></li>
+<li><code>icircumcenter(abc: 3-P)</code></li>
+</ul>
+<p><strong>Return type</strong>: <a href="./types.html#Point">Point</a></p>
+<p><strong>Returns</strong>: the cetner of the circle circumscribed on the three points given.</p>
 <h2 id="conjugate"><a class="header" href="#conjugate"><code>conjugate</code></a></h2>
 <ul>
 <li><code>conjugate(v: Number (any unit))</code></li>
@@ -372,6 +379,19 @@ Overloads are listed in the order they are checked.</p>
 </ul>
 <p><strong>Return type</strong>: <a href="./types.html#number">Number (angle)</a></p>
 <p><strong>Returns</strong>: the value with a distance unit.</p>
+<h2 id="equilateral-alias-equilateral_triangle"><a class="header" href="#equilateral-alias-equilateral_triangle"><code>equilateral</code> (alias <code>equilateral_triangle</code>)</a></h2>
+<ul>
+<li><code>equilateral()</code></li>
+</ul>
+<p><strong>Return type</strong>: <a href="./types.html#point-collections">Point collection (3)</a></p>
+<p><strong>Returns</strong>: an equilateral triangle.</p>
+<h2 id="excircle"><a class="header" href="#excircle"><code>excircle</code></a></h2>
+<ul>
+<li><code>excircle(a: Point, b: Point, c: Point)</code></li>
+<li><code>excircle(abc: 3-P)</code></li>
+</ul>
+<p><strong>Return type</strong>: <a href="./types.html#Circle">Circle</a></p>
+<p><strong>Returns</strong>: the circle excribed to the points given, with the center on the bisector of angle <code>ABC</code>.</p>
 <h2 id="homothety"><a class="header" href="#homothety"><code>homothety</code></a></h2>
 <ul>
 <li><code>homothety(origin: Point, scale: Number (no unit))</code></li>
@@ -391,7 +411,14 @@ Overloads are listed in the order they are checked.</p>
 <li><code>incircle(abc: 3-P)</code></li>
 </ul>
 <p><strong>Return type</strong>: <a href="./types.html#Circle">Circle</a></p>
-<p><strong>Returns</strong>: a circle inscribed in the three points given.</p>
+<p><strong>Returns</strong>: the circle inscribed in the three points given.</p>
+<h2 id="incenter"><a class="header" href="#incenter"><code>incenter</code></a></h2>
+<ul>
+<li><code>incenter(a: Point, b: Point, c: Point)</code></li>
+<li><code>incenter(abc: 3-P)</code></li>
+</ul>
+<p><strong>Return type</strong>: <a href="./types.html#Point">Point</a></p>
+<p><strong>Returns</strong>: the cetner of the circle inscribed in the three points given.</p>
 <h2 id="intersection"><a class="header" href="#intersection"><code>intersection</code></a></h2>
 <p>All overloads by default don't display the point dot. This can be changed with properties.</p>
 <ul>
@@ -411,6 +438,12 @@ Overloads are listed in the order they are checked.</p>
 <p><strong>Return type</strong>: <a href="./types.html#point">Point</a></p>
 <p><strong>Returns</strong>: intersection of circles <code>o1</code> and <code>o2</code>.</p>
 <p><strong>Note</strong>: <code>display_dot</code> property is not currently supported.</p>
+<h2 id="isosceles-alias-isosceles_triangle"><a class="header" href="#isosceles-alias-isosceles_triangle"><code>isosceles</code> (alias <code>isosceles_triangle</code>)</a></h2>
+<ul>
+<li><code>isosceles()</code></li>
+</ul>
+<p><strong>Return type</strong>: <a href="./types.html#point-collections">Point collection (3)</a></p>
+<p><strong>Returns</strong>: an isosceles triangle with <code>AC = BC</code>.</p>
 <h2 id="line"><a class="header" href="#line"><code>line</code></a></h2>
 <ul>
 <li><code>line(col: 2-PC)</code></li>
@@ -419,6 +452,30 @@ Overloads are listed in the order they are checked.</p>
 <p><strong>Return type</strong>: <a href="./types.html#Line">Line</a></p>
 <p><strong>Returns</strong>: a line through two given points.</p>
 <p><strong>Displays</strong>: The created line.</p>
+<h2 id="main_equilateral-alias-main_equilateral_triangle"><a class="header" href="#main_equilateral-alias-main_equilateral_triangle"><code>main_equilateral</code> (alias <code>main_equilateral_triangle</code>)</a></h2>
+<ul>
+<li><code>main_equilateral()</code></li>
+</ul>
+<p><strong>Return type</strong>: <a href="./types.html#point-collections">Point collection (3)</a></p>
+<p><strong>Returns</strong>: an equilateral triangle with <code>C.y &gt; A.y = B.y</code> and <code>A.x &lt; B.x</code>.</p>
+<h2 id="main_isosceles-alias-main_isosceles_triangle"><a class="header" href="#main_isosceles-alias-main_isosceles_triangle"><code>main_isosceles</code> (alias <code>main_isosceles_triangle</code>)</a></h2>
+<ul>
+<li><code>main_isosceles()</code></li>
+</ul>
+<p><strong>Return type</strong>: <a href="./types.html#point-collections">Point collection (3)</a></p>
+<p><strong>Returns</strong>: an isosceles triangle with <code>AC = BC</code>, <code>C.y &gt; A.y = B.y</code> and <code>A.x &lt; B.x</code>.</p>
+<h2 id="main_right-alias-main_right_triangle"><a class="header" href="#main_right-alias-main_right_triangle"><code>main_right</code> (alias <code>main_right_triangle</code>)</a></h2>
+<ul>
+<li><code>main_right()</code></li>
+</ul>
+<p><strong>Return type</strong>: <a href="./types.html#point-collections">Point collection (3)</a></p>
+<p><strong>Returns</strong>: a right triangle with <code>angle(ACB) = deg(90)</code>, <code>B.y &gt; A.y = C.y</code> and <code>C.x &lt; A.x</code>.</p>
+<h2 id="main_triangle-alias-main_triangle"><a class="header" href="#main_triangle-alias-main_triangle"><code>main_triangle</code> (alias <code>main_triangle</code>)</a></h2>
+<ul>
+<li><code>main_triangle()</code></li>
+</ul>
+<p><strong>Return type</strong>: <a href="./types.html#point-collections">Point collection (3)</a></p>
+<p><strong>Returns</strong>: a triangle with <code>C.y &gt; A.y = B.y</code> and <code>A.x &lt; B.x</code>.</p>
 <h2 id="mid"><a class="header" href="#mid"><code>mid</code></a></h2>
 <ul>
 <li><code>mid(col: 0-P)</code></li>
@@ -436,6 +493,13 @@ Overloads are listed in the order they are checked.</p>
 </ul>
 <p><strong>Return type</strong>: <a href="./types.html#Point">Point</a></p>
 <p><strong>Returns</strong>: The middle point of <code>P_1</code>, <code>P_2</code>, ... <code>P_n</code>. Special cases: when <code>n=2</code>, the middle of a segment; When <code>n=3</code>, the centroid of a triangle.</p>
+<h2 id="orthocenter-alias-orthocentre"><a class="header" href="#orthocenter-alias-orthocentre"><code>orthocenter</code> (alias <code>orthocentre</code>)</a></h2>
+<ul>
+<li><code>orthocenter(A: Point, B: Point, C: Point)</code></li>
+<li><code>orthocenter(ABC: 3-P)</code></li>
+</ul>
+<p><strong>Return type</strong>: <a href="./types.html#Point">Point</a></p>
+<p><strong>Returns</strong>: The intersection of the triangles altitudes.</p>
 <h2 id="parallel_through-alias-parallel"><a class="header" href="#parallel_through-alias-parallel"><code>parallel_through</code> (alias <code>parallel</code>)</a></h2>
 <ul>
 <li><code>parallel_through(P: Point, k: Line)</code></li>
@@ -510,6 +574,12 @@ Overloads are listed in the order they are checked.</p>
 </ul>
 <p><strong>Return type</strong>: <a href="./types.html#transformtype">TransformType</a></p>
 <p><strong>Returns</strong>: A rotation around an origin by an angle (possibly negative), along with an optional homothety at the same point.</p>
+<h2 id="right-alias-right_triangle"><a class="header" href="#right-alias-right_triangle"><code>right</code> (alias <code>right_triangle</code>)</a></h2>
+<ul>
+<li><code>right()</code></li>
+</ul>
+<p><strong>Return type</strong>: <a href="./types.html#point-collections">Point collection (3)</a></p>
+<p><strong>Returns</strong>: a right triangle with <code>angle(ACB) = deg(90)</code>.</p>
 <h2 id="sec"><a class="header" href="#sec"><code>sec</code></a></h2>
 <ul>
 <li><code>sec(v: Number (angle))</code></li>
@@ -577,6 +647,12 @@ Overloads are listed in the order they are checked.</p>
 </ul>
 <p><strong>Return type</strong>: <a href="./types.html#transformtype">TransformType</a></p>
 <p><strong>Returns</strong>: A translation by a vector.</p>
+<h2 id="triagngle-alias-triangle"><a class="header" href="#triagngle-alias-triangle"><code>triagngle</code> (alias <code>triangle</code>)</a></h2>
+<ul>
+<li><code>triangle()</code></li>
+</ul>
+<p><strong>Return type</strong>: <a href="./types.html#point-collections">Point collection (3)</a></p>
+<p><strong>Returns</strong>: a triangle.</p>
 <h2 id="x"><a class="header" href="#x"><code>x</code></a></h2>
 <ul>
 <li><code>x(P: Point)</code></li>
